@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText name, age;
     ImageView moodImage;
+    int moodState;
 
     private ActivityResultLauncher<Intent> startMoodForResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -25,8 +26,29 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == RESULT_OK) {
                         Intent data = result.getData();
+                        moodState = Integer.parseInt(data.getStringExtra(SelectMood.KEY_MOOD));
+                        switch (moodState) {
+                            case 0:
+                                moodImage.setImageResource(R.drawable.not_well);
+                                break;
+                            case 1:
+                                moodImage.setImageResource(R.drawable.sad);
+                                break;
+                            case 2:
+                                moodImage.setImageResource(R.drawable.ok);
+                                break;
+                            case 3:
+                                moodImage.setImageResource(R.drawable.good);
+                                break;
+                            case 4:
+                                moodImage.setImageResource(R.drawable.very_good);
+                                break;
+                            default:
+                                moodImage.setImageDrawable(null);
+                        }
                     } else {
-
+                        moodState = -1;
+                        moodImage.setImageDrawable(null);
                     }
                 }
             }
@@ -56,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonSubmit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                
             }
         });
     }
