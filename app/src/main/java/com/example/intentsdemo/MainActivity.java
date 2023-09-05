@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -78,7 +79,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonSubmit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                String formName = name.getText().toString();
+                String formAge = age.getText().toString();
+                int mood = moodState;
+                if (formName != null && formName.length() > 0 && formAge != null && formAge.length() > 0 && mood != -1) {
+
+                } else {
+                    Toast.makeText(MainActivity.this, "Please enter all input fields", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
