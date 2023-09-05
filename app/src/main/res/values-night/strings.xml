@@ -5,4 +5,5 @@
     <string name="feeling_label">How are you feeling?</string>
     <string name="default_mood">2</string>
     <string name="select_mood">Tell us</string>
+    <string name="submitMood">Submit</string>
 </resources>
