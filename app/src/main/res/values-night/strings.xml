@@ -1,8 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">IntentsDemo</string>
     <string name="name">Name:</string>
     <string name="age">Age:</string>
-    <string name="mood">Mood:</string>
     <string name="feeling_label">How are you feeling?</string>
     <string name="default_mood">2</string>
     <string name="select_mood">Tell us</string>
