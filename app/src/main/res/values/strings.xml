@@ -7,4 +7,6 @@
     <string name="default_mood">2</string>
     <string name="select_mood">Tell us</string>
     <string name="submitMood">Submit</string>
+    <string name="mood_cancel">Cancel</string>
+    <string name="mood_submit">Submit</string>
 </resources>
