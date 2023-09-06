@@ -9,4 +9,6 @@
     <string name="submitMood">Submit</string>
     <string name="mood_cancel">Cancel</string>
     <string name="mood_submit">Submit</string>
+    <string name="name_label">Name:</string>
+    <string name="back">Back</string>
 </resources>

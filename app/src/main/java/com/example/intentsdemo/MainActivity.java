@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView moodImage;
     int moodState;
 
+    public static final String KEY_USER = "USER";
+
     private ActivityResultLauncher<Intent> startMoodForResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
@@ -83,7 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 String formAge = age.getText().toString();
                 int mood = moodState;
                 if (formName != null && formName.length() > 0 && formAge != null && formAge.length() > 0 && mood != -1) {
-
+                    User user = new User(formName, formAge, mood);
+                    Intent intent = new Intent(MainActivity.this, ProfileDisplay.class);
+                    intent.putExtra(KEY_USER, user);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Please enter all input fields", Toast.LENGTH_SHORT).show();
                 }
