@@ -1,3 +1,7 @@
+// Assignment 2
+// MainActivity.java
+// Mihir Phatak and Aniket Shendre - Group 3
+
 package com.example.intentsdemo;
 
 import androidx.activity.result.ActivityResult;
@@ -12,12 +16,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText name, age;
     ImageView moodImage;
+    TextView moodCaption;
     int moodState;
 
     public static final String KEY_USER = "USER";
@@ -33,24 +39,30 @@ public class MainActivity extends AppCompatActivity {
                         switch (moodState) {
                             case 0:
                                 moodImage.setImageResource(R.drawable.not_well);
+                                moodCaption.setText(moodState + " out of 4");
                                 break;
                             case 1:
                                 moodImage.setImageResource(R.drawable.sad);
+                                moodCaption.setText(moodState + " out of 4");
                                 break;
                             case 2:
                                 moodImage.setImageResource(R.drawable.ok);
+                                moodCaption.setText(moodState + " out of 4");
                                 break;
                             case 3:
                                 moodImage.setImageResource(R.drawable.good);
+                                moodCaption.setText(moodState + " out of 4");
                                 break;
                             case 4:
                                 moodImage.setImageResource(R.drawable.very_good);
+                                moodCaption.setText(moodState + " out of 4");
                                 break;
                             default:
                                 moodImage.setImageDrawable(null);
                         }
                     } else {
                         moodState = -1;
+                        moodCaption.setText("");
                         moodImage.setImageDrawable(null);
                     }
                 }
@@ -65,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Mood");
 
         moodImage = (ImageView) findViewById(R.id.imageViewMoodView);
+        moodCaption = (TextView) findViewById(R.id.textViewMoodCaption);
+        moodCaption.setText("");
         moodImage.setImageDrawable(null);
 
         name = findViewById(R.id.editTextName);

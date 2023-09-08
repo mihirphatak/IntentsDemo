@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:text="@string/name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="@+id/textViewNameValue"
         app:layout_constraintEnd_toStartOf="@+id/textViewNameValue"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:text="@string/age"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="@+id/textViewAgeValue"
         app:layout_constraintEnd_toStartOf="@+id/textViewAgeValue"
         app:layout_constraintHorizontal_bias="0.012"
@@ -48,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameValue" />
 
@@ -58,6 +62,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:text="@string/mood"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewDisplay"
         app:layout_constraintEnd_toStartOf="@+id/imageViewDisplay"
         app:layout_constraintHorizontal_bias="0.0"
@@ -82,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="412dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAgeValue"
@@ -102,6 +108,7 @@
         android:id="@+id/textViewMoodStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="@+id/imageViewDisplay"
         app:layout_constraintStart_toStartOf="@+id/imageViewDisplay"
         app:layout_constraintTop_toBottomOf="@+id/imageViewDisplay" />
