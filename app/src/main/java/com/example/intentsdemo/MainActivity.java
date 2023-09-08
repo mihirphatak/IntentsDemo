@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         moodImage = (ImageView) findViewById(R.id.imageViewMoodView);
         moodCaption = (TextView) findViewById(R.id.textViewMoodCaption);
         moodCaption.setText("");
+        moodState = -1;
         moodImage.setImageDrawable(null);
 
         name = findViewById(R.id.editTextName);
@@ -97,7 +99,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String formName = name.getText().toString();
                 String formAge = age.getText().toString();
+                Log.d("moodstate", "onClick: " + moodState);
                 int mood = moodState;
+
                 if (formName != null && formName.length() > 0 && formAge != null && formAge.length() > 0 && mood != -1) {
                     User user = new User(formName, formAge, mood);
                     Intent intent = new Intent(MainActivity.this, ProfileDisplay.class);
